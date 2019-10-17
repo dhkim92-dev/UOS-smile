@@ -1,0 +1,30 @@
+<!-- UOSmile SQL queries.xml -->
+<!-- Select 문에 한해서 xml 파일에 저장 -->
+<queries>
+
+	<comment>
+		- 쿼리에 ";" 이 포함돼 있으면 invalid character 예외가 발생한다.
+	</comment>
+	<query id="getItemData">SELECT * FROM ITEM ORDER BY ITEM_CATEGORY</query>
+	
+	<query id="getAllCustomerData">SELECT * FROM CUSTOMER ORDER BY CUSTOMER_NO</query>
+	
+	<query id="getAllEmployeeData">SELECT * FROM EMPLOYEE ORDER BY WORK_START_DATE DESC</query>
+	<query id="getEmployeeDataInMyBranch">SELECT * FROM EMPLOYEE WHERE BRANCH_NO = 1 ORDER BY WORK_START_DATE DESC</query>
+	<query id="getEmployeeDataInTableInMyBranch">SELECT EMPLOYEE_NO, POSITION_CODE, EMPLOYEE_NAME, EMPLOYEE_PHONE_NO, CURRENT_WORK_STATE, WORK_START_DATE, WORK_END_DATE
+	    FROM EMPLOYEE WHERE BRANCH_NO = 1 ORDER BY WORK_START_DATE DESC</query>
+	<query id="getEmployeeDataInTable">SELECT EMPLOYEE_NO, POSITION_CODE, EMPLOYEE_NAME, EMPLOYEE_PHONE_NO, CURRENT_WORK_STATE, WORK_START_DATE, WORK_END_DATE
+	    FROM EMPLOYEE ORDER BY WORK_START_DATE DESC</query>
+	<query id="getEmployeeDataInTableInMyBranch">SELECT EMPLOYEE_NO, POSITION_CODE, EMPLOYEE_NAME, EMPLOYEE_PHONE_NO, CURRENT_WORK_STATE, WORK_START_DATE, WORK_END_DATE
+	    FROM EMPLOYEE WHERE BRANCH_NO = 1 ORDER BY WORK_START_DATE DESC</query>
+		
+	<query id="getAllWorkingRecord">SELECT * FROM WORKING_RECORD ORDER BY DATE DESC</query>
+	<query id="getWorkingWorkingRecord">SELECT * FROM WORKING_RECORD WHERE CURRENT_WORK_STATE = 'Y'</query>
+		
+	<query id="getAllHourlyWage">SELECT * FROM HOURLY_WAGE ORDER BY SEPARATION</query>
+	<query id="getAllPosition">SELECT * FROM POSITION ORDER BY POSITION_CODE</query>
+
+	<query id="getOrderData">SELECT * FROM ORDERS ORDER BY ORDER_NO DESC</query>
+	<query id="getOrderListData">SELECT * FROM ORDER_LIST ORDER BY ORDER_NO DESC</query>
+
+</queries>
